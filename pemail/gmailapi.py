@@ -104,7 +104,7 @@ def getAttachFileMsg(file):
   msg.add_header('Content-Disposition', 'attachment', filename=filename)
   return msg
 
-def send(subject, text, files, to=['yaoappemail@gmail.com']):
+def send(subject, text, files=[], to=['yaoappemail@gmail.com']):
     service = getService()
     message = create_message_with_attachment(subject, text, files, to=to)
     send_message(service, 'yaoappemail@gmail.com', message)
