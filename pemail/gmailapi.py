@@ -84,7 +84,7 @@ def getAttachFileMsg(file):
   main_type, sub_type = content_type.split('/', 1)
   
   if main_type == 'text':
-    fp = open(file, 'rb')
+    fp = open(file, 'r')
     msg = MIMEText(fp.read(), _subtype=sub_type)
     fp.close()
   elif main_type == 'image':
